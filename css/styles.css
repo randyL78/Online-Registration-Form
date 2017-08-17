@@ -1,3 +1,21 @@
 @charset "utf-8";
 /* CSS Document */
 
+/* **************************************************
+         Global Layout
+***************************************************** */
+
+* {
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+   font-family: 'Merriweather', serif;
+}

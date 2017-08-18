@@ -11,6 +11,8 @@
 
 body {
    font-family: 'Open Sans', sans-serif;
+   font-size: .9em;
+   color: #666;
 }
 
 h1,
@@ -18,4 +20,210 @@ h2,
 h3,
 h4 {
    font-family: 'Merriweather', serif;
+   font-size: 1.3em;
 }
+
+h1,
+h2,
+h3,
+h4,
+label,
+legend {
+   color: #2d3945;
+}
+
+hr {
+   border-top: #2d3945 2px solid;
+   /* adjust spacing for double border look between form title and first fieldset */
+   margin-top: 3px; 
+}
+
+/* remove bullets from unordered lists */
+ul li {
+   list-style-type: none;
+}
+
+/* **************************************************
+         Header
+***************************************************** */
+
+header {
+   padding: 10px 0;
+   text-align: center;
+   text-transform: uppercase; /* make main heading all uppercase */
+   background-color:  #2d3945;
+}
+
+header, footer, button {
+   box-shadow: 0 0 15px 0 #fff inset;
+}
+
+header h1 {
+   color: #fff;
+}
+
+/* **************************************************
+         Form
+***************************************************** */
+
+form {
+   margin-left: auto;
+   margin: 15px auto;
+   padding: 10px 10px 20px;
+   background-color: rgba(70,105,139, .4);
+   max-width: 640px;
+}
+
+form h2 {
+   padding-top: 20px;   
+}
+
+.title-group {
+   text-align: center;
+   padding: 5px 0 15px;
+   border-bottom: #2d3945 solid 4px;
+}
+
+fieldset {
+   border: none;  
+   padding: 0;
+}
+
+.outer-group {
+   padding-top: 25px;
+}
+
+.outer-group ul {
+   padding-left: 0;
+}
+
+.outer-group li {
+   display: flex;
+   flex-flow: wrap;
+   align-items: center;
+}
+
+.inner-fields {
+   margin: 10px auto;
+   padding: 10px 0;
+   display: block;
+}
+
+.inner-fields ul {
+   margin: 0;
+}
+
+input,
+select,
+textarea {
+  background: rgba(255,255,255,0.1);
+  font-size: 1em;
+  height: auto;
+  margin: 10px 0 20px;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #ebeeef;
+  color: #666;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03) inset;
+  /* add transparent border so that input doesn't resize on focus */
+  border: 2px solid rgba(70,105,139,0.00);
+  border-radius: 5px;
+  transition: all .3s;
+}
+
+
+/*override styles added in broad input selector for radio buttons and checkboxes*/
+input[type="checkbox"],
+input[type="radio"] {
+   margin: 10px 4px 8px 0;
+   display: block;
+   width: auto;
+}
+
+.inner-fields label {
+    
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+   border: 2px solid rgba(70,105,139,1.00);
+   box-shadow: 0 0 4px 1px rgba(70,105,139,1.00);
+}
+
+input::placeholder {
+   text-align: right;
+}
+
+textarea::placeholder,
+input::placeholder {
+   font-style: italic;
+}
+
+
+textarea {
+   height: 100px;
+}
+
+button[type="submit"] {
+   font-size: 1.5em;
+   background-color: #4ebbb5;
+   color: #fff;
+   width: 100%;
+   height: 60px;
+   border-radius: 5px;
+   border: none;
+   transition: box-shadow .4s;
+}
+
+button[type="submit"]:hover {
+   box-shadow: 0 0 15px 0 #276763 inset;
+}
+
+/* **************************************************
+         Footer
+***************************************************** */
+
+
+footer {
+   padding-top: 10px;
+   width: 100%;
+   text-align: center;
+   height: 225px;
+   background-color: #46698B;
+   font-size: 1.2em;   
+}
+
+em {
+   color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+   form {
+      padding-left: 20px;
+   }
+   
+   
+   .outer-group input,
+   .outer-group select {
+      width: 75%;
+      margin-left: auto;
+   }
+   
+   .outer-group li label {
+      width: 25%;
+   }
+   
+   /*override styles added in broad input selector for radio buttons and checkboxes*/
+   
+   input[type="checkbox"],
+   input[type="radio"] {
+      margin: 10px 4px 8px 0;
+      display: block;
+      width: auto;
+   }
+
+   
+}
+

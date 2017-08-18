@@ -54,6 +54,7 @@ header {
    background-color:  #2d3945;
 }
 
+/* make an inner box shadow that softens edges of the header footer and button */
 header, footer, button {
    box-shadow: 0 0 15px 0 #fff inset;
 }
@@ -113,45 +114,57 @@ fieldset {
    margin: 0;
 }
 
+
+/* general styling of all form elements */
 input,
 select,
 textarea {
   background: rgba(255,255,255,0.1);
   font-size: 1em;
   height: auto;
-  margin: 10px 0 20px;
   outline: 0;
   padding: 15px;
-  width: 100%;
-  background-color: #ebeeef;
+  background-color: #dbdedf;
   color: #666;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.06) inset;
   /* add transparent border so that input doesn't resize on focus */
   border: 2px solid rgba(70,105,139,0.00);
   border-radius: 5px;
-  transition: all .3s;
+  transition: all .4s;
 }
 
 
-/*override styles added in broad input selector for radio buttons and checkboxes*/
+/* Select only the inputs that need to scale with page text, email, select, etc */
+.outer-group >ul >li >input,
+select,
+textarea {
+  margin: 10px 0 20px;
+  width: 100%;
+}
+
+
+/*override styles added in broad input selector for radio buttons and checkboxes */
 input[type="checkbox"],
 input[type="radio"] {
-   margin: 10px 4px 8px 0;
-   display: block;
+   margin: 10px 10px 8px 0;
    width: auto;
 }
 
-.inner-fields label {
-    
+/*override height added in broad input selector for textareas */
+textarea {
+   height: 100px;
 }
 
+/* add border and other focus effects when user clicks or tabs an element */
 input:focus,
 select:focus,
 textarea:focus {
    border: 2px solid rgba(70,105,139,1.00);
    box-shadow: 0 0 4px 1px rgba(70,105,139,1.00);
+   background-color: #fff;
 }
 
+/* shift placeholder text to right side of inputs  */
 input::placeholder {
    text-align: right;
 }
@@ -159,11 +172,6 @@ input::placeholder {
 textarea::placeholder,
 input::placeholder {
    font-style: italic;
-}
-
-
-textarea {
-   height: 100px;
 }
 
 button[type="submit"] {
@@ -199,13 +207,19 @@ em {
    color: #fff;
 }
 
+
+/* **************************************************
+         Media Queries
+***************************************************** */
+
 @media screen and (min-width: 768px) {
    form {
       padding-left: 20px;
+      padding-right: 20px;
    }
    
    
-   .outer-group input,
+   .outer-group >ul >li >input,
    .outer-group select {
       width: 75%;
       margin-left: auto;
@@ -214,16 +228,6 @@ em {
    .outer-group li label {
       width: 25%;
    }
-   
-   /*override styles added in broad input selector for radio buttons and checkboxes*/
-   
-   input[type="checkbox"],
-   input[type="radio"] {
-      margin: 10px 4px 8px 0;
-      display: block;
-      width: auto;
-   }
-
    
 }
 

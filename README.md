@@ -2,6 +2,6 @@
 going for exceeds
 
 project tested on:
--Google Chrome ver 64
--Mozilla Firefox
--Microsoft Edge
+- Google Chrome ver 64
+- Mozilla Firefox
+- Microsoft Edge
